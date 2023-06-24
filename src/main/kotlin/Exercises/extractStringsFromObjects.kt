@@ -26,7 +26,6 @@ fun main(args: Array<String>) {
     print(res)
 }
 
-@Throws(IllegalAccessException::class)
 fun strings(vararg objects: Any): ArrayList<String> {
     val strings = ArrayList<String>()
     val objectsList = ArrayList<Any>()
@@ -48,8 +47,6 @@ fun strings(vararg objects: Any): ArrayList<String> {
         val fields: Array<Field> = o.javaClass.declaredFields
         for (field in fields) {
             field.isAccessible = true
-
-            //val fieldVal = field.get(o)
 
             if (field.type.equals(String::class.java)) {
                 strings.add(field.get(o) as String)
