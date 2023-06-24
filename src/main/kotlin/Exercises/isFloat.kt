@@ -1,15 +1,9 @@
-package Homework21
+package Exercises
+/*
+да се разработи функция isFloat която поучава като параметър стринг и връща true ако стринга съдрържа валидно float число.
+*/
 
 fun main(args: Array<String>) {
-    /*
-    https://gist.github.com/gozzoo/0072bd8dd56045cfa94d99cb0b8e7ddb
-    Задача 1. Валидно float число
-    да се разработи функция isFloat която поучава като параметър стринг и връща true ако стринга съдрържа валидно float число.
-
-    Забележки:
-    да не се ползва regular expression
-    стринга да не се превръща в число с вградените функции
-    */
 
     println(isFloat("0.1")) // => true
     println(isFloat(".3")) // => true
